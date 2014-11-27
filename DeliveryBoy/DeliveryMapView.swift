@@ -24,7 +24,9 @@ class MapPin : NSObject, MKAnnotation {
 class DeliveryMapView: MKMapView {
     
     func prepareForDelivery(delivery : Delivery) {
+        self.removeAnnotations(self.annotations)
         self.setCenterCoordinate(delivery.latitudeLongitude, animated: true)
-        self.addAnnotation(MapPin(coordinate: delivery.latitudeLongitude, title: delivery.address, subtitle: ""))
+        let annotation = MapPin(coordinate: delivery.latitudeLongitude, title: delivery.address, subtitle: "")
+        self.showAnnotations([annotation], animated: true)
     }
 }

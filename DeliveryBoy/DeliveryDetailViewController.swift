@@ -10,4 +10,10 @@ import DeliveryKit
 
 class DeliveryDetailViewController: UIViewController {
     var delivery : Delivery?
+    @IBOutlet weak var addressMapView: DeliveryMapView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.addressMapView.prepareForDelivery(self.delivery!)
+    }
 }

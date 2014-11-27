@@ -61,8 +61,22 @@
                     <view key="view" contentMode="scaleToFill" id="oKz-Dx-GhK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WRH-E5-ioX" customClass="DeliveryMapView" customModule="DeliveryBoy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WRH-E5-ioX" secondAttribute="trailing" id="5h8-7I-BPZ"/>
+                            <constraint firstItem="WRH-E5-ioX" firstAttribute="top" secondItem="oKz-Dx-GhK" secondAttribute="top" id="bt8-r3-PrB"/>
+                            <constraint firstItem="5lx-bs-m40" firstAttribute="top" secondItem="WRH-E5-ioX" secondAttribute="bottom" id="px9-X5-k2j"/>
+                            <constraint firstItem="WRH-E5-ioX" firstAttribute="leading" secondItem="oKz-Dx-GhK" secondAttribute="leading" id="x92-xX-jtj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressMapView" destination="WRH-E5-ioX" id="c92-2y-6QM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaX-d7-YIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
