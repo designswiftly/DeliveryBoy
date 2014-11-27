@@ -51,9 +51,13 @@ class DeliveryListViewController: UIViewController, UITableViewDataSource, UITab
             let deliveryCreatorController = destinationNavViewController.topViewController as CreateDeliveryViewController
             deliveryCreatorController.delegate = self
         } else if (segue.identifier == "DeliveryDetail"){
-            let deliveryDetail = segue.destinationViewController as DeliveryDetailViewController
-            deliveryDetail.delivery = sender as? Delivery
-            deliveryDetail.manager = manager
+            
+            if let secondaryAsNavController = segue.destinationViewController as? UINavigationController {
+                if let deliveryDetail = secondaryAsNavController.topViewController as? DeliveryDetailViewController {
+                    deliveryDetail.delivery = sender as? Delivery
+                    deliveryDetail.manager = manager
+                }
+            }
         }
     }
     

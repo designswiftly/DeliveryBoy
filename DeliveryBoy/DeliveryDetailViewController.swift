@@ -18,8 +18,16 @@ class DeliveryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addressMapView.prepareForDelivery(delivery!)
-        doneBarButton.enabled = !delivery.isDelivered()
+        if let _delivery = delivery {
+            addressMapView.prepareForDelivery(_delivery)
+            doneBarButton.enabled = !_delivery.isDelivered()
+        }
+        else {
+            doneBarButton.enabled = false
+        }
+        
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+        navigationItem.leftItemsSupplementBackButton = true
     }
     
     @IBAction func onDone(sender: AnyObject) {

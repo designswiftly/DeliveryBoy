@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
@@ -20,7 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().barTintColor = UIColor(red: 255/255.0, green: 58/255.0, blue: 45/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-                
+        
+        //Prepare SplitView
+        
+        // Override point for customization after application launch.
+        let splitViewController = self.window!.rootViewController as UISplitViewController
+        splitViewController.delegate = self
+        
         return true
     }
 
@@ -47,5 +53,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    // MARK: - Split view
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController!, ontoPrimaryViewController primaryViewController:UIViewController!) -> Bool {
+        if let secondaryAsNavController = secondaryViewController as? UINavigationController {
+            if let topAsDetailController = secondaryAsNavController.topViewController as? DeliveryDetailViewController {
+                if topAsDetailController.delivery == nil {
+                    // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+                    return true
+                }
+            }
+        }
+        return false
+    }
 }
 
+class DeliverySplitViewController : UISplitViewController {
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+}
