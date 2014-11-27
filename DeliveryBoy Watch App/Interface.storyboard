@@ -43,14 +43,32 @@
             <objects>
                 <controller id="ZWT-HO-JvC" customClass="DeliveryDetailInterfaceController" customModule="DeliveryBoy_WatchKit_Extension">
                     <items>
-                        <map height="0.90000000000000002" alignment="left" id="QjQ-mj-BgS"/>
-                        <label alignment="left" text="Address Label" numberOfLines="0" minimumScaleFactor="0.70000000000000007" id="HTK-7D-y6M"/>
-                        <label alignment="left" text="Delivery Time" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="osC-uH-OC0"/>
-                        <button width="1" height="30" alignment="left" title="Done" id="rNH-IF-3mn">
-                            <connections>
-                                <action selector="onDone" destination="ZWT-HO-JvC" id="j6C-qm-xwD"/>
-                            </connections>
-                        </button>
+                        <group width="1" height="0.90000000000000002" alignment="left" hasDetent="YES" id="zHH-oT-sfy" userLabel="Map Group">
+                            <items>
+                                <map height="1" alignment="left" id="QjQ-mj-BgS"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" initiallyAnimated="NO" hasDetent="YES" id="1N8-SD-yhh" userLabel="Address Group">
+                            <items>
+                                <label alignment="left" text="Address Label" numberOfLines="0" minimumScaleFactor="0.70000000000000007" id="HTK-7D-y6M"/>
+                            </items>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </group>
+                        <group width="1" alignment="left" initiallyAnimated="NO" hasDetent="YES" id="UZk-eE-szW" userLabel="Delivery Group">
+                            <items>
+                                <label alignment="left" text="Delivery Time" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="osC-uH-OC0"/>
+                            </items>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </group>
+                        <group width="1" alignment="left" hasDetent="YES" id="ff8-wy-0V5" userLabel="Done Group">
+                            <items>
+                                <button width="1" height="30" alignment="left" title="Done" id="rNH-IF-3mn">
+                                    <connections>
+                                        <action selector="onDone" destination="ZWT-HO-JvC" id="j6C-qm-xwD"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="addressLabel" destination="HTK-7D-y6M" id="C8w-P8-XTr"/>
