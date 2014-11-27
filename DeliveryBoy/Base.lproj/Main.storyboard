@@ -74,6 +74,13 @@
                             <constraint firstItem="WRH-E5-ioX" firstAttribute="leading" secondItem="oKz-Dx-GhK" secondAttribute="leading" id="x92-xX-jtj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xUE-wc-yXm">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="eIK-fQ-q8R">
+                            <connections>
+                                <action selector="onDone:" destination="UrC-4I-eQq" id="GbK-dz-dK7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressMapView" destination="WRH-E5-ioX" id="c92-2y-6QM"/>
                     </connections>

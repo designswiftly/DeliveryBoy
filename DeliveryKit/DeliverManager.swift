@@ -16,15 +16,19 @@ let DeliveryClassName       = "Delivery"
 let AddressKey              = "address"
 let LatKey                  = "lat"
 let LongKey                 = "long"
+let DeliveredKey            = "delivered"
 
 public class Delivery {
     
     public let address : String
     public let latitudeLongitude : CLLocationCoordinate2D
-    
+    public var delivered : Bool
+    public var deliveryID : String?
+
     public init (address : String, latitudeLongitude : CLLocationCoordinate2D) {
         self.address = address
         self.latitudeLongitude = latitudeLongitude
+        self.delivered = false
     }
 }
 
@@ -33,14 +37,14 @@ public enum FetchDeliveryResult{
     case error(NSError)
 }
 
-public typealias FetchProductsHandler = (FetchDeliveryResult) -> ()
-
 public enum CreateDeliveryResult{
     case deliveryID(String)
     case error(NSError)
 }
 
+public typealias FetchProductsHandler = (FetchDeliveryResult) -> ()
 public typealias CreateDeliveryHandler = (CreateDeliveryResult) -> ()
+public typealias UpdateDeliveryResultBlock = (Bool, NSError!) -> Void
 
 public class DeliverManager {
     public init () {
@@ -60,10 +64,30 @@ public class DeliverManager {
                         let address = pfObject.objectForKey(AddressKey) as String
                         let lat = pfObject.objectForKey(LatKey) as Double
                         let long = pfObject.objectForKey(LongKey) as Double
-                        return Delivery(address: address, latitudeLongitude: CLLocationCoordinate2DMake(lat, long))
+                        let delivered = pfObject.objectForKey(DeliveredKey) as NSNumber
+
+                        let deliveryObject = Delivery(address: address, latitudeLongitude: CLLocationCoordinate2DMake(lat, long))
+                        deliveryObject.delivered = delivered.boolValue
+                        deliveryObject.deliveryID = pfObject.objectId
+                        
+                        return deliveryObject
                     })
                     _handler(FetchDeliveryResult.deliveries(deliveries))
                 }
+            }
+        }
+    }
+    
+    public func markDeliveryAsDone(delivery:Delivery, handler : UpdateDeliveryResultBlock?){
+        let updatedDelivery = PFObject(withoutDataWithClassName: DeliveryClassName, objectId: delivery.deliveryID!)
+        updatedDelivery[DeliveredKey] = true
+        updatedDelivery.saveInBackgroundWithBlock { (success, error) -> Void in
+            if success {
+                delivery.delivered = true
+            }
+            
+            if let _handler = handler {
+                _handler(success, error)
             }
         }
     }
@@ -79,6 +103,7 @@ public class DeliverManager {
                 if let _error = error {
                     _handler(CreateDeliveryResult.error(_error))
                 } else {
+                    delivery.deliveryID = newDelivery.objectId
                     _handler(CreateDeliveryResult.deliveryID(newDelivery.objectId))
                 }
             }

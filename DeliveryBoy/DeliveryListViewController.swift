@@ -39,6 +39,12 @@ class DeliveryListViewController: UIViewController, UITableViewDataSource, UITab
         self.fetch()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "CreateDelivery"){
             let destinationNavViewController = segue.destinationViewController as UINavigationController
@@ -47,6 +53,7 @@ class DeliveryListViewController: UIViewController, UITableViewDataSource, UITab
         } else if (segue.identifier == "DeliveryDetail"){
             let deliveryDetail = segue.destinationViewController as DeliveryDetailViewController
             deliveryDetail.delivery = sender as? Delivery
+            deliveryDetail.manager = manager
         }
     }
     
@@ -78,7 +85,11 @@ class DeliveryListViewController: UIViewController, UITableViewDataSource, UITab
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let delivery : Delivery = self.deliveries![indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier(DeliveryListDataSourceCell) as UITableViewCell
-        cell.textLabel?.text = delivery.address
+        var attributedText : NSMutableAttributedString = NSMutableAttributedString(string:delivery.address)
+        if (delivery.delivered) {
+            attributedText.addAttribute(NSStrikethroughStyleAttributeName, value: 1, range: NSMakeRange(0, attributedText.length))
+        }
+        cell.textLabel?.attributedText = attributedText
         return cell
     }
     
