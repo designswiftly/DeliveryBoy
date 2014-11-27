@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--Delivery List Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="DeliveryListInterfaceController" customModule="DeliveryBoy_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" layout="vertical" id="0we-Mh-t8B">
+                            <items>
+                                <tableRow identifier="DeliveryTableRowController" id="id8-xX-4b0" customClass="DeliveryTableRowController" customModule="DeliveryBoy_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="EmG-7S-KVN">
+                                        <items>
+                                            <label alignment="left" text="Address Sample" id="Ssr-v9-19a">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="addressSample" destination="Ssr-v9-19a" id="tX3-g3-tHD"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="center" verticalAlignment="bottom" text="DeliveryBoy" id="9Zf-4D-2st">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="deliveryTable" destination="0we-Mh-t8B" id="h1G-p8-sh6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="115.94871794871796" y="250.64102564102566"/>
+        </scene>
+    </scenes>
+</document>
