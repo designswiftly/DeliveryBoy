@@ -83,6 +83,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressMapView" destination="WRH-E5-ioX" id="c92-2y-6QM"/>
+                        <outlet property="doneBarButton" destination="eIK-fQ-q8R" id="xTo-cm-Xr2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaX-d7-YIG" userLabel="First Responder" sceneMemberID="firstResponder"/>

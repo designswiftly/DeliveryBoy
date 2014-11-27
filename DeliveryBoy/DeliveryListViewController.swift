@@ -86,7 +86,7 @@ class DeliveryListViewController: UIViewController, UITableViewDataSource, UITab
         let delivery : Delivery = self.deliveries![indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier(DeliveryListDataSourceCell) as UITableViewCell
         var attributedText : NSMutableAttributedString = NSMutableAttributedString(string:delivery.address)
-        if (delivery.delivered) {
+        if (delivery.isDelivered()) {
             attributedText.addAttribute(NSStrikethroughStyleAttributeName, value: 1, range: NSMakeRange(0, attributedText.length))
         }
         cell.textLabel?.attributedText = attributedText

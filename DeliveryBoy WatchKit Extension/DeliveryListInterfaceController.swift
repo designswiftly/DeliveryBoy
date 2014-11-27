@@ -53,7 +53,7 @@ class DeliveryListInterfaceController: WKInterfaceController {
         for (index, element) in enumerate(self.deliveries!){
             let delivery = element as Delivery
             var attributedText : NSMutableAttributedString = NSMutableAttributedString(string:delivery.address)
-            if (delivery.delivered) {
+            if (delivery.isDelivered()) {
                 attributedText.addAttribute(NSStrikethroughStyleAttributeName, value: 1, range: NSMakeRange(0, attributedText.length))
             }
             let row = deliveryTable.rowControllerAtIndex(index) as DeliveryTableRowController

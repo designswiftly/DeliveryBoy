@@ -248,10 +248,10 @@
 			children = (
 				F5DF66671A265B9E009382AE /* DeliveryBoy */,
 				F5DF667D1A265B9E009382AE /* DeliveryBoyTests */,
-				F5DF664A1A265B8C009382AE /* DeliveryKit */,
-				F5DF66571A265B8C009382AE /* DeliveryKitTests */,
 				F52F5A521A274E33006616E5 /* DeliveryBoy WatchKit Extension */,
 				F52F5A5F1A274E33006616E5 /* DeliveryBoy Watch App */,
+				F5DF664A1A265B8C009382AE /* DeliveryKit */,
+				F5DF66571A265B8C009382AE /* DeliveryKitTests */,
 				F5DF66A41A265D78009382AE /* System Frameworks */,
 				F5DF66491A265B8C009382AE /* Products */,
 			);

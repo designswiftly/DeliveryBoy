@@ -16,19 +16,21 @@ let DeliveryClassName       = "Delivery"
 let AddressKey              = "address"
 let LatKey                  = "lat"
 let LongKey                 = "long"
-let DeliveredKey            = "delivered"
+let DeliveredAtKey          = "delivered_at"
 
 public class Delivery {
     
     public let address : String
     public let latitudeLongitude : CLLocationCoordinate2D
-    public var delivered : Bool
+    public var deliveryDate : NSDate?
     public var deliveryID : String?
+    public func isDelivered () -> Bool{
+        return (self.deliveryDate != nil)
+    }
 
     public init (address : String, latitudeLongitude : CLLocationCoordinate2D) {
         self.address = address
         self.latitudeLongitude = latitudeLongitude
-        self.delivered = false
     }
 }
 
@@ -64,11 +66,11 @@ public class DeliverManager {
                         let address = pfObject.objectForKey(AddressKey) as String
                         let lat = pfObject.objectForKey(LatKey) as Double
                         let long = pfObject.objectForKey(LongKey) as Double
-                        let delivered = pfObject.objectForKey(DeliveredKey) as NSNumber
+                        let deliveryDate = pfObject.objectForKey(DeliveredAtKey) as NSDate?
 
                         let deliveryObject = Delivery(address: address, latitudeLongitude: CLLocationCoordinate2DMake(lat, long))
-                        deliveryObject.delivered = delivered.boolValue
                         deliveryObject.deliveryID = pfObject.objectId
+                        deliveryObject.deliveryDate = deliveryDate
                         
                         return deliveryObject
                     })
@@ -79,11 +81,12 @@ public class DeliverManager {
     }
     
     public func markDeliveryAsDone(delivery:Delivery, handler : UpdateDeliveryResultBlock?){
+        let deliveryDate = NSDate()
         let updatedDelivery = PFObject(withoutDataWithClassName: DeliveryClassName, objectId: delivery.deliveryID!)
-        updatedDelivery[DeliveredKey] = true
+        updatedDelivery[DeliveredAtKey] = deliveryDate
         updatedDelivery.saveInBackgroundWithBlock { (success, error) -> Void in
             if success {
-                delivery.delivered = true
+                delivery.deliveryDate = deliveryDate
             }
             
             if let _handler = handler {

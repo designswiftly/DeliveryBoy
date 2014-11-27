@@ -25,8 +25,16 @@ class DeliveryMapView: MKMapView {
     
     func prepareForDelivery(delivery : Delivery) {
         self.removeAnnotations(self.annotations)
+        
+        var title : String = delivery.address
+        var subtitle : String = ""
+        if let deliveryDate = delivery.deliveryDate {
+            subtitle = "Delivered at \(deliveryDate)"
+        }
+        
         self.setCenterCoordinate(delivery.latitudeLongitude, animated: true)
-        let annotation = MapPin(coordinate: delivery.latitudeLongitude, title: delivery.address, subtitle: "")
+        let annotation = MapPin(coordinate: delivery.latitudeLongitude, title: title, subtitle: subtitle)
         self.showAnnotations([annotation], animated: true)
+        self.selectAnnotation(annotation, animated: true)
     }
 }

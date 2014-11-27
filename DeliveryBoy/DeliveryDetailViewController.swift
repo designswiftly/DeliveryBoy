@@ -12,11 +12,14 @@ class DeliveryDetailViewController: UIViewController {
     var delivery : Delivery!
     var manager : DeliverManager!
 
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
     @IBOutlet weak var addressMapView: DeliveryMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addressMapView.prepareForDelivery(self.delivery!)
+        
+        addressMapView.prepareForDelivery(delivery!)
+        doneBarButton.enabled = !delivery.isDelivered()
     }
     
     @IBAction func onDone(sender: AnyObject) {
