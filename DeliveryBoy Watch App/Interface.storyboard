@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
     </dependencies>
     <scenes>
-        <!--Delivery List Interface Controller-->
+        <!--Deliveries-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="DeliveryListInterfaceController" customModule="DeliveryBoy_WatchKit_Extension">
+                <controller title="Deliveries" id="AgC-eL-Hgc" customClass="DeliveryListInterfaceController" customModule="DeliveryBoy_WatchKit_Extension">
                     <items>
                         <table alignment="left" layout="vertical" id="0we-Mh-t8B">
                             <items>
@@ -22,6 +22,7 @@
                                     </group>
                                     <connections>
                                         <outlet property="addressSample" destination="Ssr-v9-19a" id="tX3-g3-tHD"/>
+                                        <segue destination="ZWT-HO-JvC" kind="push" id="W6H-h4-I7Z"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -35,7 +36,31 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="115.94871794871796" y="250.64102564102566"/>
+            <point key="canvasLocation" x="-30" y="91"/>
+        </scene>
+        <!--Delivery Detail Interface Controller-->
+        <scene sceneID="4OF-5q-lk7">
+            <objects>
+                <controller id="ZWT-HO-JvC" customClass="DeliveryDetailInterfaceController" customModule="DeliveryBoy_WatchKit_Extension">
+                    <items>
+                        <map height="0.90000000000000002" alignment="left" id="QjQ-mj-BgS"/>
+                        <label alignment="left" text="Address Label" numberOfLines="0" minimumScaleFactor="0.70000000000000007" id="HTK-7D-y6M"/>
+                        <label alignment="left" text="Delivery Time" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="osC-uH-OC0"/>
+                        <button width="1" height="30" alignment="left" title="Done" id="rNH-IF-3mn">
+                            <connections>
+                                <action selector="onDone" destination="ZWT-HO-JvC" id="j6C-qm-xwD"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="addressLabel" destination="HTK-7D-y6M" id="C8w-P8-XTr"/>
+                        <outlet property="addressMapView" destination="QjQ-mj-BgS" id="R96-4h-4QO"/>
+                        <outlet property="deliveryTimeLabel" destination="osC-uH-OC0" id="dF5-bP-wfa"/>
+                        <outlet property="doneButton" destination="rNH-IF-3mn" id="t4L-ou-2aw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="248" y="91"/>
         </scene>
     </scenes>
 </document>
