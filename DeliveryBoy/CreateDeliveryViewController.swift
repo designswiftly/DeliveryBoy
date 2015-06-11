@@ -48,14 +48,14 @@ class CreateDeliveryViewController: UIViewController, UITextFieldDelegate {
         let address = textField.text
 
         var geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address, {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+        geocoder.geocodeAddressString(address) {(placemarks: [AnyObject]!, error: NSError!) -> Void in
             if let placemark = placemarks?[0] as? CLPlacemark {
                 let coordinate : CLLocationCoordinate2D = placemark.location.coordinate
                 self.chosenDelivery = Delivery(address: address, latitudeLongitude: coordinate)
                 self.addressMapView.prepareForDelivery(self.chosenDelivery!)
                 return
             }
-        })
+        }
 
         textField.resignFirstResponder()
 

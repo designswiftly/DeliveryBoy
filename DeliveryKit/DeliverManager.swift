@@ -62,11 +62,11 @@ public class DeliverManager {
                     _handler(FetchDeliveryResult.error(error))
                 } else {
                     let deliveries = result.map({ (let fetchedObject) -> Delivery in
-                        let pfObject = fetchedObject as PFObject
-                        let address = pfObject.objectForKey(AddressKey) as String
-                        let lat = pfObject.objectForKey(LatKey) as Double
-                        let long = pfObject.objectForKey(LongKey) as Double
-                        let deliveryDate = pfObject.objectForKey(DeliveredAtKey) as NSDate?
+                        let pfObject = fetchedObject as! PFObject
+                        let address = pfObject.objectForKey(AddressKey) as! String
+                        let lat = pfObject.objectForKey(LatKey) as! Double
+                        let long = pfObject.objectForKey(LongKey) as! Double
+                        let deliveryDate = pfObject.objectForKey(DeliveredAtKey) as? NSDate
 
                         let deliveryObject = Delivery(address: address, latitudeLongitude: CLLocationCoordinate2DMake(lat, long))
                         deliveryObject.deliveryID = pfObject.objectId

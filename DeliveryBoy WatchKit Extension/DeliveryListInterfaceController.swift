@@ -31,9 +31,9 @@ class DeliveryListInterfaceController: WKInterfaceController {
     var deliveries : [Delivery]?
 
     //MARK: WKInterfaceController
-    override init(context: AnyObject?) {
+    override func awakeWithContext(context: AnyObject?) {
         // Initialize variables here.
-        super.init(context: context)
+        super.awakeWithContext(context)
         
         manager.fetchDeliveries { (result) -> () in
             switch result {
@@ -73,7 +73,7 @@ class DeliveryListInterfaceController: WKInterfaceController {
                 if (delivery.isDelivered()) {
                     attributedText.addAttribute(NSStrikethroughStyleAttributeName, value: 1, range: NSMakeRange(0, attributedText.length))
                 }
-                let row = deliveryTable.rowControllerAtIndex(index) as DeliveryTableRowController
+                let row = deliveryTable.rowControllerAtIndex(index) as! DeliveryTableRowController
                 row.addressSample.setAttributedText(attributedText)
             }
         }
@@ -87,10 +87,11 @@ class DeliveryDetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var deliveryTimeLabel: WKInterfaceLabel!
     @IBOutlet weak var doneButton: WKInterfaceButton!
     var manager : DeliverManager!
-    let delivery: Delivery!
+    var delivery: Delivery!
     
-    override init(context: AnyObject?) {
-        super.init(context: context)
+    override func awakeWithContext(context: AnyObject?) {
+        // Initialize variables here.
+        super.awakeWithContext(context)
         if let _segueHolder = context as? DeliverySegueHolder {
             delivery = _segueHolder.delivery
             manager = _segueHolder.manager
@@ -125,7 +126,11 @@ class DeliveryDetailInterfaceController: WKInterfaceController {
         }
         
         self.addressLabel.setAttributedText(deliveryAddressText)
-        self.addressMapView.setCoordinateRegion(MKCoordinateRegionMake(delivery!.latitudeLongitude, MKCoordinateSpanMake(0.01, 0.01)))
+        
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        let center = CLLocationCoordinate2D(latitude:delivery!.latitudeLongitude.latitude, longitude:delivery!.latitudeLongitude.longitude)
+        let region = MKCoordinateRegionMake(center, span)
+        self.addressMapView.setRegion(region)
         self.addressMapView.addAnnotation(delivery!.latitudeLongitude, withPinColor: .Red)
     }
 }

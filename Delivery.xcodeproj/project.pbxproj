@@ -21,13 +21,10 @@
 		F56E00E71A272CEB003C6134 /* DeliveryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E00E61A272CEB003C6134 /* DeliveryDetailViewController.swift */; };
 		F56E00E91A272DEF003C6134 /* DeliveryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E00E81A272DEF003C6134 /* DeliveryMapView.swift */; };
 		F5DF664E1A265B8C009382AE /* DeliveryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F5DF664D1A265B8C009382AE /* DeliveryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5DF66541A265B8C009382AE /* DeliveryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DF66481A265B8C009382AE /* DeliveryKit.framework */; };
-		F5DF665B1A265B8C009382AE /* DeliveryKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF665A1A265B8C009382AE /* DeliveryKitTests.swift */; };
 		F5DF666B1A265B9E009382AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF666A1A265B9E009382AE /* AppDelegate.swift */; };
 		F5DF66701A265B9E009382AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DF666E1A265B9E009382AE /* Main.storyboard */; };
 		F5DF66721A265B9E009382AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DF66711A265B9E009382AE /* Images.xcassets */; };
 		F5DF66751A265B9E009382AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5DF66731A265B9E009382AE /* LaunchScreen.xib */; };
-		F5DF66811A265B9E009382AE /* DeliveryBoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF66801A265B9E009382AE /* DeliveryBoyTests.swift */; };
 		F5DF66881A265BC4009382AE /* DeliveryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DF66481A265B8C009382AE /* DeliveryKit.framework */; };
 		F5DF668A1A265C87009382AE /* DeliverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF66891A265C87009382AE /* DeliverManager.swift */; };
 		F5DF668E1A265CC0009382AE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DF668C1A265CC0009382AE /* Bolts.framework */; };
@@ -60,20 +57,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = F52F5A4D1A274E33006616E5;
 			remoteInfo = "DeliveryBoy WatchKit Extension";
-		};
-		F5DF66551A265B8C009382AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F5DF663D1A265B7C009382AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F5DF66471A265B8C009382AE;
-			remoteInfo = DeliveryKit;
-		};
-		F5DF667B1A265B9E009382AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F5DF663D1A265B7C009382AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F5DF66651A265B9E009382AE;
-			remoteInfo = DeliveryBoy;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -110,7 +93,6 @@
 		F5DF66481A265B8C009382AE /* DeliveryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeliveryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DF664C1A265B8C009382AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5DF664D1A265B8C009382AE /* DeliveryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryKit.h; sourceTree = "<group>"; };
-		F5DF66531A265B8C009382AE /* DeliveryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DF66591A265B8C009382AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5DF665A1A265B8C009382AE /* DeliveryKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryKitTests.swift; sourceTree = "<group>"; };
 		F5DF66661A265B9E009382AE /* DeliveryBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +101,6 @@
 		F5DF666F1A265B9E009382AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5DF66711A265B9E009382AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5DF66741A265B9E009382AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F5DF667A1A265B9E009382AE /* DeliveryBoyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveryBoyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DF667F1A265B9E009382AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5DF66801A265B9E009382AE /* DeliveryBoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryBoyTests.swift; sourceTree = "<group>"; };
 		F5DF66891A265C87009382AE /* DeliverManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliverManager.swift; sourceTree = "<group>"; };
@@ -169,14 +150,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5DF66501A265B8C009382AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F5DF66541A265B8C009382AE /* DeliveryKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F5DF66631A265B9E009382AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,13 +157,6 @@
 				F5DF66881A265BC4009382AE /* DeliveryKit.framework in Frameworks */,
 				F5DF66A91A265DC4009382AE /* Parse.framework in Frameworks */,
 				F5DF66A81A265DC4009382AE /* Bolts.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5DF66771A265B9E009382AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				F5DF66481A265B8C009382AE /* DeliveryKit.framework */,
-				F5DF66531A265B8C009382AE /* DeliveryKitTests.xctest */,
 				F5DF66661A265B9E009382AE /* DeliveryBoy.app */,
-				F5DF667A1A265B9E009382AE /* DeliveryBoyTests.xctest */,
 				F52F5A4E1A274E33006616E5 /* DeliveryBoy WatchKit Extension.appex */,
 				F52F5A5B1A274E33006616E5 /* DeliveryBoy Watch App.app */,
 			);
@@ -449,24 +413,6 @@
 			productReference = F5DF66481A265B8C009382AE /* DeliveryKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F5DF66521A265B8C009382AE /* DeliveryKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5DF665F1A265B8C009382AE /* Build configuration list for PBXNativeTarget "DeliveryKitTests" */;
-			buildPhases = (
-				F5DF664F1A265B8C009382AE /* Sources */,
-				F5DF66501A265B8C009382AE /* Frameworks */,
-				F5DF66511A265B8C009382AE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F5DF66561A265B8C009382AE /* PBXTargetDependency */,
-			);
-			name = DeliveryKitTests;
-			productName = DeliveryKitTests;
-			productReference = F5DF66531A265B8C009382AE /* DeliveryKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		F5DF66651A265B9E009382AE /* DeliveryBoy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5DF66821A265B9E009382AE /* Build configuration list for PBXNativeTarget "DeliveryBoy" */;
@@ -486,31 +432,13 @@
 			productReference = F5DF66661A265B9E009382AE /* DeliveryBoy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F5DF66791A265B9E009382AE /* DeliveryBoyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5DF66851A265B9E009382AE /* Build configuration list for PBXNativeTarget "DeliveryBoyTests" */;
-			buildPhases = (
-				F5DF66761A265B9E009382AE /* Sources */,
-				F5DF66771A265B9E009382AE /* Frameworks */,
-				F5DF66781A265B9E009382AE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F5DF667C1A265B9E009382AE /* PBXTargetDependency */,
-			);
-			name = DeliveryBoyTests;
-			productName = DeliveryBoyTests;
-			productReference = F5DF667A1A265B9E009382AE /* DeliveryBoyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F5DF663D1A265B7C009382AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0630;
 				TargetAttributes = {
 					F52F5A4D1A274E33006616E5 = {
 						CreatedOnToolsVersion = 6.2;
@@ -521,15 +449,8 @@
 					F5DF66471A265B8C009382AE = {
 						CreatedOnToolsVersion = 6.2;
 					};
-					F5DF66521A265B8C009382AE = {
-						CreatedOnToolsVersion = 6.2;
-					};
 					F5DF66651A265B9E009382AE = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					F5DF66791A265B9E009382AE = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = F5DF66651A265B9E009382AE;
 					};
 				};
 			};
@@ -547,11 +468,9 @@
 			projectRoot = "";
 			targets = (
 				F5DF66651A265B9E009382AE /* DeliveryBoy */,
-				F5DF66791A265B9E009382AE /* DeliveryBoyTests */,
 				F52F5A4D1A274E33006616E5 /* DeliveryBoy WatchKit Extension */,
 				F52F5A5A1A274E33006616E5 /* DeliveryBoy Watch App */,
 				F5DF66471A265B8C009382AE /* DeliveryKit */,
-				F5DF66521A265B8C009382AE /* DeliveryKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -582,13 +501,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5DF66511A265B8C009382AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F5DF66641A265B9E009382AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,13 +508,6 @@
 				F5DF66701A265B9E009382AE /* Main.storyboard in Resources */,
 				F5DF66751A265B9E009382AE /* LaunchScreen.xib in Resources */,
 				F5DF66721A265B9E009382AE /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5DF66781A265B9E009382AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,14 +530,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5DF664F1A265B8C009382AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F5DF665B1A265B8C009382AE /* DeliveryKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F5DF66621A265B9E009382AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -642,14 +539,6 @@
 				F56E00E51A268AC2003C6134 /* CreateDeliveryViewController.swift in Sources */,
 				F5DF666B1A265B9E009382AE /* AppDelegate.swift in Sources */,
 				F56E00E71A272CEB003C6134 /* DeliveryDetailViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5DF66761A265B9E009382AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F5DF66811A265B9E009382AE /* DeliveryBoyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,16 +554,6 @@
 			isa = PBXTargetDependency;
 			target = F52F5A4D1A274E33006616E5 /* DeliveryBoy WatchKit Extension */;
 			targetProxy = F52F5A661A274E33006616E5 /* PBXContainerItemProxy */;
-		};
-		F5DF66561A265B8C009382AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F5DF66471A265B8C009382AE /* DeliveryKit */;
-			targetProxy = F5DF66551A265B8C009382AE /* PBXContainerItemProxy */;
-		};
-		F5DF667C1A265B9E009382AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F5DF66651A265B9E009382AE /* DeliveryBoy */;
-			targetProxy = F5DF667B1A265B9E009382AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -884,6 +763,7 @@
 		F5DF66411A265B7C009382AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -1004,94 +884,6 @@
 			};
 			name = Release;
 		};
-		F5DF66601A265B8C009382AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = DeliveryKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		F5DF66611A265B8C009382AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = DeliveryKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		F5DF66831A265B9E009382AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1189,98 +981,6 @@
 			};
 			name = Release;
 		};
-		F5DF66861A265B9E009382AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = DeliveryBoyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeliveryBoy.app/DeliveryBoy";
-			};
-			name = Debug;
-		};
-		F5DF66871A265B9E009382AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = DeliveryBoyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeliveryBoy.app/DeliveryBoy";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1320,29 +1020,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5DF665F1A265B8C009382AE /* Build configuration list for PBXNativeTarget "DeliveryKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F5DF66601A265B8C009382AE /* Debug */,
-				F5DF66611A265B8C009382AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F5DF66821A265B9E009382AE /* Build configuration list for PBXNativeTarget "DeliveryBoy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5DF66831A265B9E009382AE /* Debug */,
 				F5DF66841A265B9E009382AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5DF66851A265B9E009382AE /* Build configuration list for PBXNativeTarget "DeliveryBoyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F5DF66861A265B9E009382AE /* Debug */,
-				F5DF66871A265B9E009382AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

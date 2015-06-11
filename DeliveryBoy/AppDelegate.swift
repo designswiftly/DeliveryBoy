@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         //Prepare SplitView
         
         // Override point for customization after application launch.
-        let splitViewController = self.window!.rootViewController as UISplitViewController
+        let splitViewController = self.window!.rootViewController as! UISplitViewController
         splitViewController.delegate = self
         
         return true
